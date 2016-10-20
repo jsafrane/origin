@@ -3036,6 +3036,8 @@ items:
     verbs:
     - list
     - watch
+    - get
+
 - apiVersion: v1
   kind: ClusterRole
   metadata:
@@ -3090,6 +3092,16 @@ items:
     - persistentvolumeclaims/status
     verbs:
     - update
+  - apiGroups:
+    - ""
+    attributeRestrictions: null
+    resources:
+    - services
+    - endpoints
+    verbs:
+    - create
+    - delete
+    - get
 - apiVersion: v1
   kind: ClusterRole
   metadata:
